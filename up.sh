@@ -16,7 +16,7 @@ fi
 echo "Pull docker image: thrift:$version"
 docker pull "thrift:$version"
 
-echo "Write proxy command file to /usr/local/thrift"
+echo "Write proxy command file to /usr/local/bin/thrift"
 
 proxy_file="docker run --rm -v \"\$PWD:\$PWD\" -w \$PWD -u \`id -u\` thrift:$version thrift \"\$@\""
 
